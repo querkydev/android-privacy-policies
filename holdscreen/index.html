@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoldScreen — Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(22, 28, 45, 0.7);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --primary-gold: #fbbf24;
+            --primary-gold-glow: rgba(251, 191, 36, 0.15);
+            --accent-green: #34d399;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(251, 191, 36, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(251, 191, 36, 0.03) 0%, transparent 40%);
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 96px;
+            height: 96px;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, #ffffff 60%, var(--primary-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(52, 211, 153, 0.1);
+            color: var(--accent-green);
+            padding: 0.3rem 0.8rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+            border: 1px solid rgba(52, 211, 153, 0.2);
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background-color: var(--primary-gold);
+            border-radius: 2px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-bottom: 1.5rem;
+            padding-left: 0.5rem;
+        }
+
+        li {
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+
+        .permission-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .permission-name {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            color: var(--primary-gold);
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .permission-name code {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.1rem 0.4rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+        }
+
+        .permission-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(217, 119, 6, 0.02) 100%);
+            border: 1px dashed rgba(251, 191, 36, 0.3);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-box p {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        footer a {
+            color: var(--primary-gold);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            .container {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="screenshots/logo.png" alt="HoldScreen Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 22px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);">
+            </div>
+            <h1>HoldScreen</h1>
+            <p class="subtitle">Privacy Policy for HoldScreen Mobile Application</p>
+            <span class="badge">No Data Collected</span>
+        </header>
+
+        <section>
+            <h2>Overview</h2>
+            <p>
+                This privacy policy governs your use of the mobile application <strong>HoldScreen</strong> ("Application") for mobile devices, which was created by <strong>Querkydevs</strong>. 
+                HoldScreen is designed to lock touch screen inputs temporarily to prevent accidental touches.
+            </p>
+            <p>
+                We believe in absolute, uncompromised privacy. The Application is built with a <strong>"zero-collection" architecture</strong>.
+            </p>
+        </section>
+
+        <section class="highlight-box">
+            <p>⚡ <strong>HoldScreen does not collect, store, share, or transmit any user data or personal information.</strong></p>
+        </section>
+
+        <section>
+            <h2>No Internet Permission</h2>
+            <p>
+                To guarantee your privacy, HoldScreen does not ask for or use the <code>android.permission.INTERNET</code> permission. 
+                Because the app has no network privileges whatsoever, it is physically impossible for the app to transmit any data off your device.
+            </p>
+        </section>
+
+        <section>
+            <h2>Information Storage (App State)</h2>
+            <p>
+                The Application operates entirely locally. To provide basic functionality, it stores only configuration states (app preferences) locally on your device using Android DataStore preferences:
+            </p>
+            <ul>
+                <li><strong>Theme State:</strong> Stores whether you selected Light, Dark, or System mode.</li>
+                <li><strong>Widget Toggle State:</strong> Remembers whether the floating bubble widget is toggled on or off.</li>
+            </ul>
+            <p>
+                These settings are used exclusively to maintain your configuration preferences when launching the app. They never contain personal information, and never leave your device.
+            </p>
+        </section>
+
+        <section>
+            <h2>Required Permissions & Usage</h2>
+            <p>
+                To perform its touch-blocking features, the Application requires the following system permissions. They are used purely for utility operations:
+            </p>
+
+            <div class="permission-card">
+                <div class="permission-name">🛡️ <code>SYSTEM_ALERT_WINDOW</code></div>
+                <p class="permission-desc">
+                    Also known as "Display over other apps". This is required to draw the floating gold lock bubble and the touch-blocking overlay. Without this, the app cannot block touch gestures.
+                </p>
+            </div>
+
+            <div class="permission-card">
+                <div class="permission-name">⚙️ <code>FOREGROUND_SERVICE</code></div>
+                <p class="permission-desc">
+                    Allows the floating bubble to remain active and draggable while you use other apps. This service displays an active notification in the system drawer to ensure transparency.
+                </p>
+            </div>
+
+            <div class="permission-card">
+                <div class="permission-name">🔔 <code>POST_NOTIFICATIONS</code></div>
+                <p class="permission-desc">
+                    Used to display the active Touch Guard notification on Android 13+. This notification is required by Android to run foreground services and lets you quickly stop the screen guard.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Third-Party Services & Ads</h2>
+            <p>
+                The Application is 100% ad-free and tracker-free. We do not use any third-party software development kits (SDKs), advertising networks, analytics providers (such as Google Analytics or Firebase), or crash reporting tools that collect or track user behavior.
+            </p>
+        </section>
+
+        <section>
+            <h2>Children's Privacy</h2>
+            <p>
+                We do not collect any information from anyone, including children under the age of 13. Since the Application collects absolutely zero personal information, it is fully compliant with the Children's Online Privacy Protection Act (COPPA).
+            </p>
+        </section>
+
+        <section>
+            <h2>Changes to This Policy</h2>
+            <p>
+                This Privacy Policy may be updated from time to time for any reason. We will notify you of any changes by posting the new Privacy Policy here and updating the date below.
+            </p>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                If you have any questions regarding privacy while using the Application, please contact us via email.
+            </p>
+        </section>
+
+        <footer>
+            <p>Last updated: May 28, 2026</p>
+            <p>Developed by <a href="https://github.com/querkydev" target="_blank" rel="noopener noreferrer">Querkydevs</a></p>
+        </footer>
+    </div>
+</body>
+</html>
