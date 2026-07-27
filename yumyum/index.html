@@ -67,16 +67,19 @@
         }
 
         .app-icon-wrap {
-            width: 72px;
-            height: 72px;
-            border-radius: 18px;
-            background: linear-gradient(135deg, var(--green-mid), #4ea04d);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
+            width: 84px;
+            height: 84px;
+            border-radius: 20px;
             margin: 0 auto 1rem;
-            box-shadow: 0 8px 24px rgba(91, 168, 90, 0.3);
+            box-shadow: 0 8px 24px rgba(91, 168, 90, 0.25);
+            overflow: hidden;
+        }
+
+        .app-icon-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         header h1 {
@@ -277,7 +280,7 @@
 
     <!-- Header -->
     <header>
-        <div class="app-icon-wrap">🥦</div>
+        <div class="app-icon-wrap"><img src="logo.png" alt="YumYum App Logo"></div>
         <h1>YumYum: Kid Nutrition Tracker</h1>
         <p class="subtitle">Privacy Policy</p>
         <span class="badge">Last Updated: July 27, 2026</span>
@@ -372,28 +375,7 @@
         </ul>
     </div>
 
-    <!-- 6. Optional Gemini AI -->
-    <div class="card">
-        <h2><span class="icon">🤖</span> Optional AI Feature (Gemini)</h2>
-        <p>
-            YumYum includes an optional AI-assisted meal name classification feature powered by Google's Gemini API.
-        </p>
-        <p>
-            This feature is <strong>disabled by default</strong>. It only activates if you or the developer has configured a Gemini API key in the app's environment configuration.
-        </p>
-        <p>
-            If enabled, when you type a meal name (e.g., "Scrambled Eggs with Spinach"), the app sends <strong>only that free-text meal name</strong> to the Gemini API to suggest which food categories it belongs to.
-        </p>
-        <div class="warning-box">
-            <p>No child profile data, child name, age, or identifying information is ever sent to the Gemini API. Only the free-text meal name string is transmitted.</p>
-        </div>
-        <p style="margin-top: 1rem;">
-            When using the Gemini API, Google's privacy policy applies to data processed through that service:
-            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>
-        </p>
-    </div>
-
-    <!-- 7. Permissions Table -->
+    <!-- 6. Permissions Table -->
     <div class="card">
         <h2><span class="icon">🔐</span> Android Permissions Explained</h2>
         <table>
@@ -493,15 +475,10 @@
                     <td>Typography — loaded at build time, bundled locally</td>
                     <td>None</td>
                 </tr>
-                <tr>
-                    <td>Gemini API (optional)</td>
-                    <td>AI-assisted meal category classification</td>
-                    <td>Meal name text only (if feature enabled)</td>
-                </tr>
             </tbody>
         </table>
         <p style="margin-top: 0.85rem;">
-            No advertising networks, analytics SDKs, crash reporting tools, or social media SDKs are integrated into YumYum.
+            No advertising networks, analytics SDKs, crash reporting tools, social media SDKs, or external AI services are integrated into YumYum.
         </p>
     </div>
 
