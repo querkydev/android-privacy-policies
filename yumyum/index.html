@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YumYum: Kid Nutrition Tracker — Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fdf8f2;
+            --card: #ffffff;
+            --border: #e8f5e9;
+            --green-dark: #1e3a1f;
+            --green-mid: #5ba85a;
+            --green-light: #e8f5e9;
+            --orange: #f38502;
+            --text-primary: #1e3a1f;
+            --text-secondary: #6b8f6b;
+            --text-muted: #aac4ab;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 2rem 1rem 4rem;
+            min-height: 100vh;
+            background-image:
+                radial-gradient(circle at 10% 15%, rgba(91, 168, 90, 0.06) 0%, transparent 40%),
+                radial-gradient(circle at 90% 85%, rgba(243, 133, 2, 0.05) 0%, transparent 40%);
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding: 2.5rem 2rem;
+            background: var(--card);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(30, 58, 31, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--green-mid), var(--orange));
+        }
+
+        .app-icon-wrap {
+            width: 72px;
+            height: 72px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, var(--green-mid), #4ea04d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin: 0 auto 1rem;
+            box-shadow: 0 8px 24px rgba(91, 168, 90, 0.3);
+        }
+
+        header h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--green-dark);
+            margin-bottom: 0.4rem;
+        }
+
+        header .subtitle {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        header .badge {
+            display: inline-block;
+            margin-top: 0.75rem;
+            padding: 0.25rem 0.85rem;
+            background: var(--green-light);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--green-mid);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            padding: 1.75rem 2rem;
+            margin-bottom: 1.25rem;
+            box-shadow: 0 2px 12px rgba(30, 58, 31, 0.04);
+        }
+
+        .card h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--green-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .card h2 .icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            background: var(--green-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        p {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            margin-bottom: 0.85rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul, ol {
+            padding-left: 1.4rem;
+            margin-bottom: 0.85rem;
+        }
+
+        li {
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        a {
+            color: var(--green-mid);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: var(--green-light);
+            border: 1px solid #c8e6c9;
+            border-radius: 14px;
+            padding: 1rem 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 0.85rem;
+            color: var(--green-dark);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .highlight-box p::before {
+            content: '✅  ';
+        }
+
+        /* Warning box */
+        .warning-box {
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            border-radius: 14px;
+            padding: 1rem 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .warning-box p {
+            font-size: 0.85rem;
+            color: #6d4c00;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            margin-top: 0.75rem;
+        }
+
+        th {
+            background: var(--green-light);
+            color: var(--green-dark);
+            font-weight: 700;
+            padding: 0.6rem 0.85rem;
+            text-align: left;
+            border-bottom: 2px solid var(--border);
+        }
+
+        td {
+            padding: 0.6rem 0.85rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-primary);
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        footer strong {
+            color: var(--green-mid);
+        }
+
+        /* Emoji list items */
+        .emoji-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .emoji-list li {
+            padding-left: 1.75rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .emoji-list li::before {
+            content: attr(data-emoji);
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 1.25rem 1rem;
+            }
+            header {
+                padding: 2rem 1.25rem;
+            }
+            header h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <div class="app-icon-wrap">🥦</div>
+        <h1>YumYum: Kid Nutrition Tracker</h1>
+        <p class="subtitle">Privacy Policy</p>
+        <span class="badge">Last Updated: July 27, 2026</span>
+    </header>
+
+    <!-- 1. Overview -->
+    <div class="card">
+        <h2><span class="icon">👋</span> Welcome & Overview</h2>
+        <p>
+            Thank you for using <strong>YumYum: Kid Nutrition Tracker</strong>, developed by <strong>Querky Dev's</strong>
+            (<code>com.querkydevs.yumyum</code>). This Privacy Policy explains how YumYum handles your information.
+        </p>
+        <p>
+            YumYum is designed to be a <strong>privacy-first, offline app</strong>. We built it with one core principle:
+            <strong>your family's data stays on your device</strong>.
+        </p>
+        <div class="highlight-box">
+            <p>YumYum does NOT collect, store, or transmit any personal data to our servers. There is no account required, no cloud sync, and no analytics tracking.</p>
+        </div>
+    </div>
+
+    <!-- 2. What Data the App Uses -->
+    <div class="card">
+        <h2><span class="icon">📱</span> What Data Is Stored — And Where</h2>
+        <p>
+            All data you enter into YumYum is stored <strong>locally on your device only</strong> using:
+        </p>
+        <ul class="emoji-list">
+            <li data-emoji="🗄️"><strong>SQLite Database:</strong> Logged meals, ingredient portions, fluid logs.</li>
+            <li data-emoji="💾"><strong>Local Storage:</strong> Child profiles, preferences, streak counter, notification settings, favorites, theme.</li>
+        </ul>
+        <p>This data includes:</p>
+        <ul>
+            <li>Child's first name, date of birth, and age</li>
+            <li>Child's weight and height (optional)</li>
+            <li>Dietary tags / allergy information</li>
+            <li>Meal logs (foods eaten, portions, dates, photos)</li>
+            <li>Fluid intake logs (milk/water)</li>
+            <li>App preferences and notification times</li>
+        </ul>
+        <div class="highlight-box">
+            <p>None of this data is transmitted to Querky Dev's or any third party. It never leaves your device unless you explicitly choose to export a backup file.</p>
+        </div>
+    </div>
+
+    <!-- 3. Data Backup -->
+    <div class="card">
+        <h2><span class="icon">💾</span> Data Backup & Export</h2>
+        <p>
+            YumYum provides a <strong>backup and restore feature</strong> that lets you:
+        </p>
+        <ul>
+            <li>Export all your app data (profiles, meals, recipes) as a <code>.json</code> file to your device storage.</li>
+            <li>Import a previously exported backup file to restore your data.</li>
+        </ul>
+        <p>
+            This export is performed locally on your device. Querky Dev's does not receive, access, or store this backup file.
+            You control where you save or share it.
+        </p>
+        <div class="warning-box">
+            <p>If you choose to share your backup file via email, cloud storage, or messaging apps, the privacy policy of those services applies to that shared data.</p>
+        </div>
+    </div>
+
+    <!-- 4. Camera & Photos -->
+    <div class="card">
+        <h2><span class="icon">📷</span> Camera & Photo Access</h2>
+        <p>
+            YumYum requests optional access to your device's camera and photo library to allow you to:
+        </p>
+        <ul>
+            <li>Attach a photo to a logged meal (take new photo or select from gallery).</li>
+            <li>Update a recipe's cover photo.</li>
+        </ul>
+        <p>
+            Photos are stored <strong>locally on your device</strong> only. They are not uploaded, transmitted, or shared anywhere by the app.
+            Camera and photo access is entirely optional. You can use all core features without granting it.
+        </p>
+    </div>
+
+    <!-- 5. Notifications -->
+    <div class="card">
+        <h2><span class="icon">🔔</span> Push Notifications</h2>
+        <p>
+            YumYum can send <strong>local push notifications</strong> to remind you when a meal time is approaching or a feeding slot has been missed.
+        </p>
+        <ul>
+            <li>Notifications are generated entirely on-device using Android's local notification system.</li>
+            <li>No notification content is sent to or through external servers.</li>
+            <li>You can customize notification times per meal slot or disable them entirely from the Profile screen.</li>
+            <li>On Android 13+, you will be prompted to grant notification permission.</li>
+        </ul>
+    </div>
+
+    <!-- 6. Optional Gemini AI -->
+    <div class="card">
+        <h2><span class="icon">🤖</span> Optional AI Feature (Gemini)</h2>
+        <p>
+            YumYum includes an optional AI-assisted meal name classification feature powered by Google's Gemini API.
+        </p>
+        <p>
+            This feature is <strong>disabled by default</strong>. It only activates if you or the developer has configured a Gemini API key in the app's environment configuration.
+        </p>
+        <p>
+            If enabled, when you type a meal name (e.g., "Scrambled Eggs with Spinach"), the app sends <strong>only that free-text meal name</strong> to the Gemini API to suggest which food categories it belongs to.
+        </p>
+        <div class="warning-box">
+            <p>No child profile data, child name, age, or identifying information is ever sent to the Gemini API. Only the free-text meal name string is transmitted.</p>
+        </div>
+        <p style="margin-top: 1rem;">
+            When using the Gemini API, Google's privacy policy applies to data processed through that service:
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>
+        </p>
+    </div>
+
+    <!-- 7. Permissions Table -->
+    <div class="card">
+        <h2><span class="icon">🔐</span> Android Permissions Explained</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Permission</th>
+                    <th>Why It's Needed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>CAMERA</strong></td>
+                    <td>Allows you to take a photo when logging a meal. Optional.</td>
+                </tr>
+                <tr>
+                    <td><strong>READ_MEDIA_IMAGES</strong></td>
+                    <td>Allows selecting an existing photo from your gallery for a meal log. Optional.</td>
+                </tr>
+                <tr>
+                    <td><strong>POST_NOTIFICATIONS</strong></td>
+                    <td>Required on Android 13+ to show meal reminder notifications.</td>
+                </tr>
+                <tr>
+                    <td><strong>SCHEDULE_EXACT_ALARM</strong></td>
+                    <td>Delivers meal reminders at the specific times you configure.</td>
+                </tr>
+                <tr>
+                    <td><strong>RECEIVE_BOOT_COMPLETED</strong></td>
+                    <td>Re-schedules meal reminders after your device restarts.</td>
+                </tr>
+                <tr>
+                    <td><strong>VIBRATE</strong></td>
+                    <td>Haptic feedback when you interact with buttons and log actions.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 8. Children's Privacy -->
+    <div class="card">
+        <h2><span class="icon">👶</span> Children's Privacy (COPPA)</h2>
+        <p>
+            YumYum is designed to be used <strong>by parents and caregivers</strong> on behalf of their children.
+            The app is not intended to be used directly by children.
+        </p>
+        <p>
+            We do not knowingly collect personal information from children under 13 directly.
+            All data entered (such as a child's name or date of birth) is managed by the parent or guardian
+            and stored only on their personal device.
+        </p>
+        <p>
+            If you believe we have inadvertently collected information from a child under 13, please contact us
+            immediately at <a href="mailto:querkydevs@gmail.com">querkydevs@gmail.com</a>.
+        </p>
+    </div>
+
+    <!-- 9. Data Deletion -->
+    <div class="card">
+        <h2><span class="icon">🗑️</span> Data Deletion</h2>
+        <p>
+            Since all data is stored locally on your device, you can delete it at any time:
+        </p>
+        <ul class="emoji-list">
+            <li data-emoji="👤"><strong>Delete a Profile:</strong> Go to Profile screen → select a profile → Delete Profile. This removes all meals, logs, and data associated with that profile.</li>
+            <li data-emoji="🍽️"><strong>Delete individual meals:</strong> Swipe left on any meal card to delete, or use the long-press menu → Delete.</li>
+            <li data-emoji="📱"><strong>Uninstall the app:</strong> Uninstalling YumYum removes all app data from your device.</li>
+        </ul>
+    </div>
+
+    <!-- 10. Third-Party Services -->
+    <div class="card">
+        <h2><span class="icon">🔗</span> Third-Party Services</h2>
+        <p>
+            YumYum uses the following third-party technology components:
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Purpose</th>
+                    <th>Data Shared</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Capacitor (Ionic)</td>
+                    <td>Native Android bridge</td>
+                    <td>None</td>
+                </tr>
+                <tr>
+                    <td>SQLite (Community Plugin)</td>
+                    <td>Local on-device database</td>
+                    <td>None — all local</td>
+                </tr>
+                <tr>
+                    <td>Google Fonts (Quicksand)</td>
+                    <td>Typography — loaded at build time, bundled locally</td>
+                    <td>None</td>
+                </tr>
+                <tr>
+                    <td>Gemini API (optional)</td>
+                    <td>AI-assisted meal category classification</td>
+                    <td>Meal name text only (if feature enabled)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-top: 0.85rem;">
+            No advertising networks, analytics SDKs, crash reporting tools, or social media SDKs are integrated into YumYum.
+        </p>
+    </div>
+
+    <!-- 11. Security -->
+    <div class="card">
+        <h2><span class="icon">🛡️</span> Security</h2>
+        <p>
+            Because all data is stored locally on your device, the security of your data is protected by:
+        </p>
+        <ul>
+            <li>Your device's own operating system security (screen lock, encryption at rest).</li>
+            <li>Android's app sandboxing, which prevents other apps from accessing YumYum's data.</li>
+        </ul>
+        <p>
+            We recommend enabling a screen lock and device encryption on your Android device for maximum data protection.
+        </p>
+    </div>
+
+    <!-- 12. Disclaimer -->
+    <div class="card">
+        <h2><span class="icon">⚠️</span> Medical Disclaimer</h2>
+        <p>
+            YumYum provides <strong>educational nutritional estimates</strong> based on WHO pediatric guidelines and standard food portion conversions.
+        </p>
+        <p>
+            YumYum is <strong>not a medical device</strong> and is not intended to diagnose, treat, cure, or prevent any disease or health condition.
+            Nutrition calculations are approximations and should be used as a guide only.
+        </p>
+        <p>
+            Always consult a qualified pediatrician or registered dietitian for medical nutrition advice for your child.
+        </p>
+    </div>
+
+    <!-- 13. Changes to Policy -->
+    <div class="card">
+        <h2><span class="icon">📄</span> Changes to This Privacy Policy</h2>
+        <p>
+            Querky Dev's may update this Privacy Policy from time to time. Any changes will be reflected with an updated
+            "Last Updated" date at the top of this page.
+        </p>
+        <p>
+            For significant changes, we will make efforts to notify users through an in-app notice in the next app update.
+        </p>
+    </div>
+
+    <!-- 14. Contact -->
+    <div class="card">
+        <h2><span class="icon">📬</span> Contact Us</h2>
+        <p>
+            If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us:
+        </p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:querkydevs@gmail.com">querkydevs@gmail.com</a></li>
+            <li><strong>Developer:</strong> Querky Dev's</li>
+            <li><strong>App ID:</strong> <code>com.querkydevs.yumyum</code></li>
+        </ul>
+        <p>We aim to respond to all privacy-related inquiries within 72 hours.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <strong>Querky Dev's</strong>. All rights reserved.</p>
+        <p style="margin-top: 0.4rem;">YumYum: Kid Nutrition Tracker · <code>com.querkydevs.yumyum</code></p>
+        <p style="margin-top: 0.4rem; font-size: 0.75rem; color: #ccc;">This privacy policy is hosted at <a href="https://querkydev.github.io/android-privacy-policies/yumyum/" target="_blank">https://querkydev.github.io/android-privacy-policies/yumyum/</a></p>
+    </footer>
+
+</div>
+</body>
+</html>
