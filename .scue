@@ -1,0 +1,12 @@
+{
+  "name": "android-privacy-policies",
+  "version": "1",
+  "permissions": {
+    "read": true,
+    "write": true,
+    "execute": true,
+    "git": true,
+    "web": false
+  },
+  "agents": []
+}
